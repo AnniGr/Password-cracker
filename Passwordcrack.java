@@ -145,58 +145,7 @@ public static String reverse(String word){
 
      return new String(res);
  }
-  
-
- public static void mangle2( String word){
-     // mangles the words that are already mangled once
-     if(word.length() !=0){
-    crackingP(toUpperCase(word));
-    crackingP(toLowerCase(word));
-
-    crackingP(reverse(word));
-    crackingP(ncapatalize(word));
-
-    if(word.length() <9){
-    crackingP(reflect1(word));
-    crackingP(reflect2(word));
-    crackingP(duplicate(word));
-    crackingP(removeLastChar(word)); 
-    crackingP(capatalizeLastLetter(word));
-    
-    }
-    crackingP(capatalizeFirstLetter(word));
-    crackingP(Upfirstandeveryotherletter(word));
-    crackingP(Upsecondandeveryotherletter(word));
-    crackingP(removefirst(word));
-   
-}
- }
- public static void mangle1( String word){
-    // mangles the words that are already mangled once
-    if(word.length() !=0){
-   mang.add(crackingP(toUpperCase(word)));
-   mang.add(crackingP(toLowerCase(word)));
-
-   mang.add(crackingP(reverse(word)));
-   mang.add(crackingP(ncapatalize(word)));
-
-   if(word.length() <9){
-   mang.add(crackingP(reflect1(word)));
-   mang.add(crackingP(reflect2(word)));
-   mang.add(crackingP(duplicate(word)));
-   mang.add(crackingP(removeLastChar(word))); 
-   mang.add(crackingP(capatalizeLastLetter(word)));
-  
-   } 
-   mang.add(crackingP(capatalizeFirstLetter(word)));
-   mang.add(crackingP(Upfirstandeveryotherletter(word)));
-   mang.add(crackingP(Upsecondandeveryotherletter(word)));
-   mang.add(crackingP(removefirst(word)));
-  
-}
-
-}
-
+ 
 
  public static void mangle( String word){
 
@@ -268,7 +217,7 @@ public static String reverse(String word){
                 userpass.add(det[0]);
                 userpass.add(det[4]);  
                 userpass.add(spl[0]);
-               userpass.add(spl[1]);
+                userpass.add(spl[1]);
 
 
 
@@ -282,13 +231,7 @@ public static String reverse(String word){
             /*  if(buffread1.readLine() == null){
                 System.out.println("The passwordfile is empty");
             }*/
-           
-           // System.out.println(salt);
-            //System.out.println(arraypass);
-           //  System.out.println(salt);
-
-            // common passwords
-           // dictionary.add("commixth");
+          
             userpass.add("123456");
             userpass.add("123456789");
             userpass.add("qwerty");
@@ -304,7 +247,6 @@ public static String reverse(String word){
             userpass.add("fotball");
             userpass.add("admin");
             userpass.add("1q2w3e4r");
-        //  dictionary.add("assymetric");
             userpass.add("654321");
             userpass.add("555555");
             userpass.add("lovely");
@@ -329,46 +271,32 @@ public static String reverse(String word){
             userpass.add("Hackenbush");
             userpass.add("Devereaux");
      
-            for(String word : userpass){ //mangle each word in dictionary
+        for(String word : userpass){ //mangle each word in dictionary
                 mangle(word);
-                   //mangle(word);
                 }
 
-                for(String word : dictionary){ //mangle each word in dictionary
-                    crackingP(word);
-                       //mangle(word);
+        for(String word : dictionary){ //mangle each word in dictionary
+                    crackingP(word);   
                     }
      
 
         for(String word : dictionary){ //mangle each word in dictionary
                mangle(word);
-                  //mangle(word);
-               }
+        
 
-           for(String word: dictionary){
+         for(String word: dictionary){
             
              for(int i = 0; i<38; i++){
                        String prepend = charsTotable[i]+ word;
                        //crackingP(prepend);
-                        mangle1(prepend);  
+                        mangle(prepend);  
                     if(word.length() <=8){
                        String append =word + charsTotable[i];
                        //crackingP(append);
-                       mangle1(append);
+                       mangle(append);
                 }}
           }
    
-       
-        for(String mang: mangled){ //mangle the mangled words without adding to a new list
-
-         mangle2(mang);
-      
-            }
-    for(String mangs: mang){
-            mangle2(mangs);
-        }
-        
-
             } 
             catch(FileNotFoundException error){
                 
