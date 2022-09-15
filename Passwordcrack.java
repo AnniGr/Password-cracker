@@ -9,7 +9,7 @@ public class PasswordCrack {
 
     public static ArrayList<String> dictionary = new ArrayList<>();
     public static   ArrayList<String> arraypass = new ArrayList<>();
-  public static    ArrayList<String> salt = new ArrayList<>();
+    public static    ArrayList<String> salt = new ArrayList<>();
     public static   ArrayList<String> password = new ArrayList<>();
     public static   ArrayList<String> passa = new ArrayList<>();
     public static   ArrayList<String> toRemove = new ArrayList<>();
